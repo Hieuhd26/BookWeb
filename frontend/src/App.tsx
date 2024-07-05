@@ -1,17 +1,17 @@
 import React from 'react';
 
 import './App.css';
-
+import { NavBar } from './layout/header-footer/NavBar';
+import { Footer } from './layout/header-footer/Footer';
+import { BodyPage } from './layout/BodyPage';
+import { layToanBoSach } from './api/SachApi';
 function App() {
+layToanBoSach().then().catch()
   return (
     <div className="App">
-      <nav className='navbar navbar-expand-lg bg-body-tertiary'  style={{ backgroundColor:"#aa56ff" }}>
-        <div className="container">
-          <a className="navbar-brand" href="#">
-            <img src="https://devicon-website.vercel.app/api/fastapi/original.svg"alt="Bootstrap" width="30" height="24"></img>
-          </a>
-        </div>
-      </nav>
+      <NavBar />
+      <BodyPage/>
+      <Footer/>
     </div>
   );
 }
