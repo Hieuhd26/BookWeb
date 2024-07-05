@@ -20,7 +20,7 @@ export const SachProps: React.FC<SachPropsInterface> = ({ sach }) => {
         layToanBoAnh(maSach).then(
             anhData => {
                 setDanhSachAnh(anhData);
-                setDangTaiDuLieu(false);
+                setDangTaiDuLieu(false);//m
             }
         ).catch(
             error => {
